@@ -1,0 +1,468 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Source+Serif+Pro:wght@200;300;400;600;700&family=Titillium+Web:wght@300;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  outline: 0;
+}
+
+body {
+  display: block;
+}
+
+:root {
+  --main-color: #001427;
+}
+
+/*  Common styles  */
+
+.brand {
+  text-decoration: underline;
+}
+
+.red-letter {
+  font-family: inherit;
+  color: #8d0801;
+  font-weight: 600;
+}
+
+/*  End: Common styles  */
+
+body {
+  font-family: "Titillium Web", sans-serif;
+  background-color: #a2d2ff;
+  height: 100vh;
+  width: 100%;
+
+  overflow: hidden;
+}
+
+.welcome_page {
+  width: 100%;
+  position: relative;
+  display: block;
+  visibility: visible;
+  transition: all 1s;
+}
+
+.welcome_page.change {
+  display: none;
+  visibility: hidden;
+}
+
+.floating-bg {
+  width: 150vw;
+  height: 150vw;
+  background-color: var(--main-color);
+  opacity: 0.9;
+  position: absolute;
+  top: -105vw;
+  left: calc(50% - 53vw);
+  border-radius: 52%;
+  animation: rotate 50s infinite;
+  will-change: auto;
+}
+
+.floating-bg::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 40%;
+  animation: rotate 60s infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.welcome_page .welcome_page--heading {
+  position: absolute;
+  top: 5vw;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 300;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.welcome_page span {
+  font-weight: 600;
+}
+
+.welcome_page .login-form-app {
+  position: absolute;
+  top: 20vw;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 40rem;
+  width: 25rem;
+  transform: translate(-50%, -50%);
+}
+
+.welcome_page .login-form-app h3 {
+  color: #fff;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.welcome_page .login-form-app .login__input {
+  position: relative;
+  font-family: inherit;
+  border: none;
+  padding: 0.5rem 2rem;
+  font-size: 1.3rem;
+  text-align: center;
+  width: 12rem;
+  border-radius: 10rem;
+  margin: 1rem;
+  color: inherit;
+  transition: all 0.3s;
+}
+
+.welcome_page .login-form-app .login__input::placeholder {
+  color: #bbb;
+}
+
+.welcome_page .login-form-app .sbm--login-form-app {
+  border: none;
+  margin-top: 2rem;
+  width: 15rem;
+  padding: 1rem 0.8rem;
+  border-radius: 5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.inputBox .toggleBtn {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  right: 1.6rem;
+  top: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+}
+
+.inputBox .toggleBtn::before {
+  content: "\f06e";
+  font-family: fontAwesome;
+  font-size: 1rem;
+}
+
+.inputBox .toggleBtn.hide::before {
+  content: "\f070";
+}
+
+/*-------- APP -------*/
+.app {
+  position: relative;
+  width: 100%;
+  display: none;
+  transition: all 1s;
+}
+
+.app.change {
+  display: block;
+}
+
+.balance .welcome_user--heading {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+}
+
+.app--exit {
+  width: 8rem;
+  font-weight: 500;
+  padding: 0.7rem 2rem;
+  background-color: transparent;
+  border: 0.1rem solid var(--main-color);
+  border-radius: 0.7rem;
+  margin-bottom: 2rem;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+/*--------- Balance --------*/
+
+.balance {
+  width: 100%;
+  position: relative;
+  left: 14%;
+  margin-bottom: 2rem;
+}
+
+.current-balance {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 50rem;
+}
+
+.balance__label {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: -0.2rem;
+  margin-right: 1rem;
+}
+
+.balance__date {
+  font-size: 1rem;
+  color: #888;
+}
+
+.balance__value {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-right: 22rem;
+}
+
+/*--------- Movements --------*/
+
+.wrapper-movements {
+  display: flex;
+  align-items: flex-start;
+  gap: 11rem;
+  width: 90rem;
+  margin-right: 5rem;
+  position: relative;
+  left: 14%;
+}
+
+.movements_summary {
+  display: flex;
+  flex-direction: column;
+}
+
+.movements {
+  display: flex;
+  flex-direction: column;
+  border-left: 0.1rem solid #001427;
+  border-top: 0.1rem solid #001427;
+  border-bottom: 0.1rem solid #001427;
+  border-radius: 0.6rem;
+  min-width: 47rem;
+  background-color: transparent;
+  height: 50rem;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+}
+
+.movements__row {
+  padding: 2.25rem 4rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 0.08rem solid var(--main-color);
+}
+
+.movements__type {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #fff;
+  padding: 0.1rem 1rem;
+  border-radius: 10rem;
+}
+
+.movements__date {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #666;
+  margin-left: 10rem;
+  text-align: center;
+}
+
+.movements__type--deposit {
+  background-image: linear-gradient(to top left, #39b385, #9be15d);
+  width: 7.5rem;
+  text-align: center;
+}
+
+.movements__type--withdrawal {
+  background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+  width: 7.5rem;
+}
+
+.movements__value {
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-left: 10rem;
+}
+
+.movements__value--deposit {
+  color: #084b31;
+}
+
+.movements__value--withdrawal {
+  color: #8d0801;
+}
+
+/*-------- Operations -------*/
+
+.operations {
+  width: 50%;
+}
+.operation {
+  border-radius: 1rem;
+  padding: 2rem 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+  width: 40rem;
+  min-width: 20rem;
+}
+
+.operation--transfer {
+  border: 0.1rem solid var(--main-color);
+}
+
+.operation--loan {
+  border: 0.1rem solid var(--main-color);
+}
+
+.operation--close {
+  border: 0.1rem solid var(--main-color);
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--main-color);
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 2.5fr 2.5fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 0.4rem 1rem;
+}
+
+.form__input {
+  width: 100%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  font-family: inherit;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #333;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.7rem;
+  transition: all 0.3s;
+}
+
+.form__input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.form__label {
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.form__btn {
+  width: 3.8rem;
+  border: none;
+  border-radius: 0.7rem;
+  font-size: 1.3rem;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.form__btn:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.wrapper-operations {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Exceptions for loan */
+.form.form--loan {
+  grid-template-columns: 2.5fr 1fr 2.5fr;
+}
+.form__label--loan {
+  grid-row: 2;
+}
+/* End exceptions */
+
+/*-------- Summary ------- */
+.summary {
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 0.3rem;
+
+  margin-top: 2.5rem;
+}
+
+.summary-wrapper {
+  width: 70%;
+  display: flex;
+  align-items: center;
+}
+
+.summary__label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-right: 0.8rem;
+}
+
+.summary__value {
+  font-size: 1.8rem;
+  margin-right: 2rem;
+}
+
+.summary__value--in,
+.summary__value--interest {
+  color: #66c873;
+}
+
+.summary__value--out {
+  color: #f5465d;
+}
+
+/*------- Log Out ------*/
+.logout-timer {
+  text-align: right;
+  padding: 0 0.3rem;
+  font-size: 1.25rem;
+  margin-top: 6.5rem;
+}
+
+.timer {
+  font-weight: 600;
+}

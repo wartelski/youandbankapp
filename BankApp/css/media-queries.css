@@ -1,0 +1,227 @@
+@media (max-width: 1900px) {
+  .operation {
+    width: 27rem;
+  }
+}
+
+@media (max-width: 1700px) {
+  .operation {
+    width: 22rem;
+  }
+
+  .logout-timer {
+    margin-top: 4.5rem;
+  }
+  
+  .inputBox .toggleBtn {
+    top: 1.6rem;
+  }
+}
+
+@media (max-width: 1500px) {
+  .floating-bg {
+    top: -87vw;
+  }
+
+  .welcome_page .welcome_page--heading {
+    font-size: 2.5rem;
+    left: 50%;
+  }
+
+  .welcome_page .login-form-app {
+    top: 24vw;
+  }
+
+  .welcome_page .login-form-app .login__input {
+    width: 10rem;
+    font-size: 1.1rem;
+  }
+
+  .welcome_page .login-form-app .login__input::placeholder {
+    font-size: 1rem;
+  }
+
+  .welcome_page .login-form-app .sbm--login-form-app {
+    padding: 0.6rem 0.5rem;
+  }
+
+  /*------- APP ---------*/
+  .app .navbar-wrapper nav {
+    width: 100%;
+  }
+
+  .movements {
+    min-width: 41rem;
+    width: 41rem;
+  }
+
+  .movements__date {
+    margin-left: 7rem;
+  }
+
+  .movements__value {
+    margin-left: 7rem;
+  }
+
+  .app .navbar-wrapper nav {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .app .navbar-wrapper nav {
+    width: 70rem;
+    margin-right: -15rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .floating-bg {
+    top: -66vw;
+  }
+
+  .welcome_page .login-form-app {
+    top: 30vw;
+  }
+}
+
+@media (max-height: 1130px) {
+  body {
+    overflow: scroll;
+  }
+}
+
+@media (max-width: 1000px) {
+  .welcome_page .welcome_page--heading {
+    top: 11vw;
+    width: 40rem;
+    text-align: center;
+  }
+
+  .welcome_page .login-form-app {
+    top: 38vw;
+  }
+}
+
+@media (max-width: 800px) {
+  .floating-bg {
+    top: -53vw;
+  }
+
+  .welcome_page .login-form-app {
+    top: 47vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .wrapper-movements {
+    flex-direction: column;
+    width: 100%;
+    gap: 3rem;
+  }
+
+  .wrapper-operations {
+    flex-direction: row;
+  }
+
+  .movements {
+    max-width: 40rem;
+    height: 32rem;
+  }
+
+  .movements__row {
+    justify-content: space-between;
+  }
+
+  .logout-timer {
+    margin-top: 0;
+    margin-left: 2rem;
+    width: 18rem;
+  }
+
+  .app--exit {
+    position: absolute;
+    left: 78%;
+    bottom: 107%;
+  }
+}
+
+@media (max-width: 650px) {
+  .movements {
+    width: 45rem;
+  }
+
+  .app--exit {
+    left: 83%;
+  }
+}
+
+@media (max-width: 600px) {
+  .floating-bg {
+    top: -50vw;
+  }
+
+  .welcome_page .welcome_page--heading {
+    font-size: 1.9rem;
+  }
+
+  .welcome_page .login-form-app h3 {
+    font-size: 1.2rem;
+  }
+
+  .welcome_page .login-form-app .login__input {
+    padding: 0.3rem;
+  }
+
+  .welcome_page .login-form-app .sbm--login-form-app {
+    padding: 0.5rem 0.2rem;
+    font-size: 0.8rem;
+    width: 12rem;
+  }
+
+  .inputBox .toggleBtn {
+    top:1.4rem;
+  }
+
+  .logout-timer {
+    margin-left: 2rem;
+  }
+
+  .app--exit {
+    left: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  .floating-bg {
+    top: -31vw;
+    left: calc(50% - 64vw);
+  }
+
+  .welcome_page .welcome_page--heading {
+    font-size: 1.4rem;
+  }
+  .welcome_page .login-form-app {
+    top: 61vw;
+  }
+
+  .welcome_page .login-form-app h3 {
+    font-size: 0.8rem;
+  }
+
+  .app nav .welcome_user--heading {
+    margin-left: 2rem;
+  }
+
+  .movements {
+    width: 40rem;
+  }
+
+  .logout-timer {
+    margin-left: 2rem;
+  }
+
+  .app--exit {
+    left: 106%;
+  }
+}

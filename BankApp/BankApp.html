@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="css/BankApp_style.css" />
+    <link rel="stylesheet" href="css/media-queries.css" />
+
+    <script src="app-js/data.js" defer></script>
+    <script src="app-js/BankApp.js" defer></script>
+
+    <title>You&Bank-App</title>
+  </head>
+  <body>
+    <section class="welcome_page" id="welcome_page">
+      <div class="floating-bg"></div>
+      <h1 class="welcome_page--heading">
+        Welcome to
+        <span class="brand">You<span class="red-letter">&</span>Bank</span>
+        App
+      </h1>
+
+      <form class="login-form-app">
+        <h3>
+          Login with our credentials to<br />
+          get started
+        </h3>
+
+        <input
+          type="text"
+          placeholder="username"
+          class="login__input login__input--user"
+        />
+
+        <div class="inputBox">
+          <input
+            type="password"
+            placeholder="PIN"
+            maxlength="4"
+            class="password login__input login__input--pin"
+          />
+          <span class="toggleBtn"></span>
+        </div>
+
+        <button type="submit" class="sbm--login-form-app">Submit</button>
+      </form>
+    </section>
+
+    <main class="app">
+      <div class="navbar-wrapper">
+        <nav></nav>
+      </div>
+
+      <!-- BALANCE -->
+      <div class="balance">
+        <h1 class="welcome_user--heading"></h1>
+        <div class="current-balance">
+          <p class="balance__label">Current balance:</p>
+          <p class="balance__value"></p>
+        </div>
+
+        <p class="balance__date">As of <span class="date"></span></p>
+      </div>
+
+      <!-- MOVEMENTS -->
+      <div class="wrapper-movements">
+        <div class="movements_summary">
+          <div class="movements"></div>
+
+          <!-- SUMMARY -->
+          <div class="summary">
+            <div class="summary-wrapper">
+              <p class="summary__label">In</p>
+              <p class="summary__value summary__value--in">0000€</p>
+              <p class="summary__label">Out</p>
+              <p class="summary__value summary__value--out">0000€</p>
+              <p class="summary__label">Interest</p>
+              <p class="summary__value summary__value--interest">0000€</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- OPERATIONS -->
+
+        <div class="wrapper-operations">
+          <button class="app--exit">Log out</button>
+          <div class="operations">
+            <!-- Transfers -->
+            <div class="operation operation--transfer">
+              <h2>Transfer money</h2>
+              <form class="form form--transfer">
+                <input type="text" class="form__input form__input--to" />
+                <input type="number" class="form__input form__input--amount" />
+                <button class="form__btn form__btn--transfer">&rarr;</button>
+                <label class="form__label">Transfer to</label>
+                <label class="form__label">Amount</label>
+              </form>
+            </div>
+
+            <!-- Loan -->
+            <div class="operation operation--loan">
+              <h2>Request loan</h2>
+              <form class="form form--loan">
+                <input
+                  type="number"
+                  class="form__input form__input--loan-amount"
+                />
+                <button class="form__btn form__btn--loan">&rarr;</button>
+                <label class="form__label form__label--loan">Amount</label>
+              </form>
+            </div>
+
+            <!-- Close the account -->
+            <div class="operation operation--close">
+              <h2>Close account</h2>
+              <form class="form form--close">
+                <input type="text" class="form__input form__input--user" />
+                <input
+                  type="password"
+                  maxlength="6"
+                  class="form__input form__input--pin"
+                />
+                <button class="form__btn form__btn--close">&rarr;</button>
+                <label class="form__label">Confirm user</label>
+                <label class="form__label">Confirm PIN</label>
+              </form>
+            </div>
+          </div>
+          <!-- LOGOUT TIMER -->
+          <p class="logout-timer">
+            You will be logged out in <span class="timer"></span>
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

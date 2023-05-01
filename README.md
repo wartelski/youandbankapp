@@ -75,6 +75,7 @@ After entering the username and pin code of the present user (check **How to use
 - Used modern, up-to-date JavaScript (ES6+)
 
 ## App Flowchart
+![flowchart](https://github.com/wartelski/youandbankapp/blob/main/flowchartApp.png)
 
 ## Quality Tests
 

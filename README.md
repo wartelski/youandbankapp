@@ -81,3 +81,7 @@ After entering the username and pin code of the present user (check **How to use
 
 As the app is fairly simple and can be upgraded to more functional project, I didn't add any tests for now. <br>
 But if to do so, I would do it using [TestRigor](https://testrigor.com/)
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
